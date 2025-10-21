@@ -1,5 +1,5 @@
 import unittest
-
+from main import is_odd
 class TestIsOdd(unittest.TestCase):
 
     def test_odd_num(self):

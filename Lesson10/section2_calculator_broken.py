@@ -35,7 +35,7 @@ def divide(a, b):
 def calculator(a, b, ops):
   if ops == 1:
     add(a, b, ops)
-  elif ops == 2:
+  if ops == 2:
     sub(a, b, ops)
   elif ops == 3:
     multiply(a, b, ops)
@@ -65,14 +65,14 @@ def user_selection():
   try:
       a = int(input("Enter the first number: "))
   except ValueError:
-      b = -1000000000000
+      a = -1000000000000
 
   try:
       b = int(input("Enter the second number: "))
   except ValueError:
       b = -1000000000000
 
-  if ops<1 or ops>4 or a ==-1000000000000 or b==-1000000000000:
+  if ops<1 or ops>4 or a ==-1000000000000 or b ==-1000000000000:
     print("Sorry, one of the entries was not right.")
   else:
    calculator(a, b, ops)
